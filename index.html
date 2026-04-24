@@ -57,30 +57,67 @@
       z-index: 1;
     }
     h1 {
-      font-size: clamp(2.8rem, 4vw, 4.8rem);
-      margin-bottom: 16px;
-      letter-spacing: -0.05em;
-      text-transform: uppercase;
-      color: #9e2c77;
+        font-size: clamp(2.8rem, 4vw, 4.8rem);
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-family: "Segoe Script", "Brush Script MT", cursive, "Poppins", sans-serif;
+    color: transparent;
+    background: linear-gradient(135deg, #d03f8d, #f48fc6, #ffd8a8, #6dc6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow:
+      0 10px 30px rgba(159, 42, 119, 0.18),
+      0 2px 10px rgba(148, 25, 110, 0.12);
+    position: relative;
+    display: inline-block;
+    }
+    h1::after {
+        content: "✨";
+        position: absolute;
+        top: -18px;
+        right: -42px;
+        font-size: 1.3rem;
+        color: #ffe4ff;
+        opacity: 0.95;
     }
     .subtitle {
-      font-size: 1.1rem;
-      margin-bottom: 28px;
-      color: #7b3a63;
-      max-width: 720px;
-      line-height: 1.75;
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+        color: #6f3e73;
+        max-width: 720px;
+        line-height: 1.75;
+        font-style: italic;
+        position: relative;
+        padding-left: 32px;
+    }
+    .subtitle::before {
+        content: "❀";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #ff94c2;
+        font-size: 1.4rem;
+        opacity: 0.85;
     }
     .date-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 12px 30px rgba(255, 144, 199, 0.18);
-      font-weight: 600;
-      color: #c12d76;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 244, 251, 0.95));
+        border: 2px solid transparent;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        box-shadow: 0 12px 30px rgba(255, 144, 199, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+        position: relative;
+        color: #c12d76;
+    }
+    .date-pill::after {
+        content: "🎀";
+        margin-left: 4px;
     }
     .photo-grid {
       display: grid;
