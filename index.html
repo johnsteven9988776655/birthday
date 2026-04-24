@@ -57,29 +57,43 @@
       z-index: 1;
     }
     h1 {
-        font-size: clamp(2.8rem, 4vw, 4.8rem);
-    margin-bottom: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    font-family: "Segoe Script", "Brush Script MT", cursive, "Poppins", sans-serif;
-    color: transparent;
-    background: linear-gradient(135deg, #d03f8d, #f48fc6, #ffd8a8, #6dc6ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow:
-      0 10px 30px rgba(159, 42, 119, 0.18),
-      0 2px 10px rgba(148, 25, 110, 0.12);
-    position: relative;
-    display: inline-block;
+        font-size: clamp(3rem, 5vw, 5.8rem);
+        margin-bottom: 18px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-family: "Lucida Handwriting", "Segoe Print", "Comic Sans MS", cursive, "Poppins", sans-serif;
+        color: transparent;
+        background: linear-gradient(120deg, #ff79b7 0%, #ffb4d8 35%, #ffdba1 65%, #a1d8ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-shadow:
+        0 10px 28px rgba(177, 54, 106, 0.16),
+        0 2px 10px rgba(142, 38, 92, 0.12);
+        position: relative;
+        display: inline-block;
+    }
+    h1::before {
+        content: "";
+        position: absolute;
+        inset: -0.28em -0.15em 0.2em;
+        background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.85), transparent 42%);
+        filter: blur(6px);
+        border-radius: 1.2rem;
+        z-index: -1;
     }
     h1::after {
         content: "✨";
         position: absolute;
-        top: -18px;
-        right: -42px;
-        font-size: 1.3rem;
-        color: #ffe4ff;
+        top: -0.6rem;
+        right: -1.1rem;
+        font-size: 1.4rem;
+        color: #ffe5ff;
         opacity: 0.95;
+        animation: sparkle 1.8s ease-in-out infinite;
+    }
+    @keyframes sparkle {
+        0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+        50% { transform: translateY(-4px) scale(1.05); opacity: 0.8; }
     }
     .subtitle {
         font-size: 1.1rem;
@@ -296,9 +310,9 @@
       <h1>Happy Birthday, Pretty Shan!</h1>
       <p class="subtitle">
         Celebrating your special day with love, sparkle, and lots of pink magic.
-        24th April 2025 is the perfect reason to smile, dance, and enjoy every moment.
+        24th April 2026 is the perfect reason to smile, dance, and enjoy every moment.
       </p>
-      <div class="date-pill">24 April 2025</div>
+      <div class="date-pill">24 April 2026</div>
 
       <div class="photo-grid">
         <div class="photo-card">
